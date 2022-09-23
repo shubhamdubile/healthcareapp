@@ -28,7 +28,7 @@ import pickle
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH ='new_vgg19_20sep.h5'
+#MODEL_PATH ='new_vgg19_20sep.h5'
 
 
 # Load your trained model
@@ -36,7 +36,7 @@ MODEL_PATH ='new_vgg19_20sep.h5'
 
 
 
-model1 = pickle.load(open("RandomForestClassifier_1.pkl", 'rb'))
+model1 = pickle.load(open("RandomForestClassifier_10.pkl", 'rb'))
 
 
 
