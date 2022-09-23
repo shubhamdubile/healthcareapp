@@ -56,13 +56,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="../static/heart_result.jpg" class="d-block w-100 img-responsive img-fluid" style="height:300px" alt="...">
+                <img  src="{{ url_for('static', filename='heart_result.jpg') }} class="d-block w-100 img-responsive img-fluid" style="height:300px" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="../static/analysis2.jpg" class="d-block w-100 img-fluid" style="height:300px"  alt="...">
+                <img  src="{{ url_for('static', filename='analysis2.jpg') }} class="d-block w-100 img-fluid" style="height:300px"  alt="...">
               </div>
               <div class="carousel-item">
-                <img src="../static/pill.jpg" class="d-block w-100 img-fluid" style="height:300px" alt="...">
+                <img  src="{{ url_for('static', filename='pill.jpg') }} class="d-block w-100 img-fluid" style="height:300px" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
