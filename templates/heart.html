@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100 pt-2 pb-2 pr-2 p-lg-2">
+    <h1>Heart</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <a class="navbar-brand" href="#">
+                <img src="https://www.dailyrounds.org/blog/wp-content/uploads/2015/05/caduceus.jpg" width="30" height="30" alt="">
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">Analysis</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Heart </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index">Brain</a>
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
+    </nav>
+
+        <div class="container">
+            <form action="/result" method="POST" >
+
+                <!-- SEXVAR -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Gender</label>
+                <select class="form-select" id="residence" name="gender" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Male-1">Male-1</option> 
+                     <option value="Female-2">Female-2</option> 
+                    </select>
+            </div>
+
+             <!-- _AGE_G -->
+             <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Age category</label>
+                <select class="form-select" id="residence" name="age" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="18 <= AGE <= 24 --- 1">18 <= AGE <= 24 --- 1</option> 
+                     <option value="25 <= AGE <= 34 --- 2">25 <= AGE <= 34 --- 2</option> 
+
+                     <option value="35 <= AGE <= 44 --- 3">35 <= AGE <= 44 --- 3</option> 
+                     <option value="45 <= AGE <= 54 --- 4">45 <= AGE <= 54 --- 4</option> 
+                    
+                     <option value="55 <= AGE <= 64 --- 5">55 <= AGE <= 64 --- 5</option> 
+                     <option value="64 <= AGE  --- 5">64 <= AGE  --- 5</option>
+
+                     
+                    </select>
+            </div>
+
+             <!-- MARITAL -->
+             <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Marital Status</label>
+                <select class="form-select" id="marital" name="marital" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Married-1">Married-1</option> 
+                     <option value="Divorced-2">Divorced-2</option>
+                     <option value="Widowed-3">Widowed-3</option> 
+                     <option value="Separated-4">Separated-4</option> 
+                     <option value="Never Married-5">Never Married-5</option>
+                     <option value="A member of an unmarried couple-6">A member of an unmarried couple-6</option>
+                    </select>
+            </div>
+
+             <!-- _IMPRACE -->
+             <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">What is ur Ethanicity</label>
+                <select class="form-select" id="ethanicity" name="ethanicity" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="white-1">white-1</option> 
+                     <option value="Black-2">Black-2</option> 
+
+                     <option value="Asian-3">Asian-3</option> 
+                     <option value="American Indian-4">American Indian-4</option>
+
+                     <option value="Hispanic--5">Hispanic--5</option>
+                     <option value="others--6">others--6</option>
+                    </select>
+            </div>
+
+                <!-- X_BMI5CAT -->
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Select BMI Category</label>
+                <select class="form-select" id="bmi" name="bmi" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="1-UnderWeight BMI">1-UnderWeight BMI</option> 
+                    <option value="2-Normal Weight">2-Normal Weight</option> 
+                    <option value="3-OverWeight">3-OverWeight</option> 
+                    <option value="4-OverWeight">4-OverWeight</option>
+                    </select>
+            </div>
+
+            <!-- X_SMOKER3 -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Select Somking Category?</label>
+                <select class="form-select" id="smoke" name="smoke" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="1-Smoke Every Day">1-Smoke Every Day</option> 
+                     <option value="2-Smoke Some day">2-Smoke Some day</option> 
+                     <option value="3-Former Smoker">3-Former Smoker</option> 
+                     <option value="4-Never Smoked">4-Never Smoked</option>
+                    </select>
+            </div>
+
+          
+
+            
+
+            
+
+           
+
+           
+            <!-- EXERANY2 -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Have you ever played any sports(running,golf) in the past month?</label>
+                <select class="form-select" id="sports" name="sports" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Yes-1">Yes-1</option> 
+                     <option value="No-2">No-2</option> 
+                    </select>
+            </div>
+
+            <!-- GENHLTH -->
+            <div class="mb-3"> 
+                <label for="exampleInputPassword1" class="form-label">Defined Your General Health</label>
+                <select class="form-select" id="health" name="health" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Excellent-1">Excellent-1</option> 
+                     <option value="Very Good-2">Very Good-2</option> 
+                     <option value="Good-3">Good-3</option> 
+                     <option value="Fair-4">Fair-4</option> 
+                     <option value="Poor-5">Poor-5</option> 
+                    </select>
+            </div>
+
+            <!-- DIFFWALK -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Do you have serious difficulty walking or climbing stairs? </label>
+                <select class="form-select" id="walk" name="walk" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Yes-1">Yes-1</option> 
+                     <option value="No-2">No-2</option> 
+                    </select>
+            </div>
+            <!-- _PHYS14D -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">For how many days during the past 30 days your physical health not good?</label>
+                
+                    <input type="text" class="form-control"  name="pdays" placeholder="Days">
+                    
+            </div>
+
+             <!-- CVDSTRK3 -->
+             <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Do you Had Stroke Before?</label>
+                <select class="form-select" id="stroke" name="stroke" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Yes-1">Yes-1</option> 
+                     <option value="No-2">No-2</option> 
+                    </select>
+            </div>
+            
+            <!-- CVDINFR4 -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Do you had a heart attack, also called a myocardial infarction?</label>
+                <select class="form-select" id="attck" name="attack" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Yes-1">Yes-1</option> 
+                     <option value="No-2">No-2</option> 
+                    </select>
+            </div>
+            
+           
+           
+            <!-- CHCKDNY2 -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Do you Have any kidney dieases?</label>
+                <select class="form-select" id="kidney" name="kidney" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Yes-1">Yes-1</option> 
+                     <option value="No-2">No-2</option> 
+                    </select>
+            </div>
+
+            <!-- CHCSCNCR
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Do you Have Skin Cancer</label>
+                <select class="form-select" id="cancer" name="cancer" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Yes-1">Yes-1</option> 
+                     <option value="No-2">No-2</option> 
+                    </select>
+            </div> -->
+
+            <!-- CHCOCNCR -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Do you Have any other Cancer</label>
+                <select class="form-select" id="other_cancer" name="other_cancer" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Yes-1">Yes-1</option> 
+                     <option value="No-2">No-2</option> 
+                    </select>
+            </div>
+
+            <!-- CHCCOPD2  -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Do you Have chronic obstructive pulmonary disease, C.O.P.D., emphysema or chronic bronchitis?</label>
+                <select class="form-select" id="lungs" name="lungs" aria-label="Default select example">
+                    <option selected>-- Select  type --</option>
+                    <option value="Yes-1">Yes-1</option> 
+                     <option value="No-2">No-2</option> 
+                    </select>
+            </div>
+           
+            <div class="text-center"><button type="submit" class="btn btn-primary">Submit</button></div>
+        </form>
+        </div>
+        <p class="text-danger"><b>{{prediction_text}}</b></p>
+
+           
+
+
+            <footer class="bg-light text-center text-lg-start">
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2022 Copyright:
+                    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
