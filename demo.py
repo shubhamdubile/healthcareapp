@@ -14,7 +14,7 @@ import tensorflow as tf
 # from statistics import mode
 
 def predict(image):
-    classifier_model = "new_vgg19.h5"
+    classifier_model = "vgg19_23Sep.h5"
     IMAGE_SHAPE = (224, 224,3)
     model = tf.keras.models.load_model(classifier_model)
     test_image = cv2.resize(image, (224,224)
